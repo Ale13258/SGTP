@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:register/main.dart';
 
-
 class LoginScreen extends StatelessWidget {
   final _NameController = TextEditingController();
   final _PasswordController = TextEditingController();
 
   void _login() async {
     final response = await http.post(
-      Uri.parse('http://localhost:4000/login'), // URL de la API de inicio de sesión
+      Uri.parse(
+          'http://localhost:4000/login'), // URL de la API de inicio de sesión
       body: {
-        'Name':_NameController.text,
+        'Name': _NameController.text,
         'Password': _PasswordController.text,
       },
     );
@@ -22,7 +22,8 @@ class LoginScreen extends StatelessWidget {
       // Inicio de sesión exitoso, puedes realizar la redirección aquí
       Navigator.of(context as BuildContext).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => inicio(), // Reemplaza 'HomeScreen' con el nombre de tu pantalla de inicio
+          builder: (context) =>
+              inicio(), // Reemplaza 'HomeScreen' con el nombre de tu pantalla de inicio
         ),
       );
     } else {
@@ -72,6 +73,6 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
-  
+
   inicio() {}
 }
