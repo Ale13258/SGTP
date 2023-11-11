@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:register/login.dart';
 import 'package:register/widget/button_custom/register_screens.dart';
+import 'package:register/widget/maps_screens.dart';
 
 final GoRouter appRouter = GoRouter(initialLocation: '/', routes: <RouteBase>[
   GoRoute(
@@ -15,5 +16,10 @@ final GoRouter appRouter = GoRouter(initialLocation: '/', routes: <RouteBase>[
       path: '/registro',
       builder: (BuildContext context, GoRouterState state) {
         return const Register();
+      }),
+  GoRoute(
+      path: '/mapa',
+      builder: (BuildContext context, GoRouterState state) {
+        return const MapSample();
       }),
 ]);

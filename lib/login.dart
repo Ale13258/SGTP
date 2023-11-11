@@ -11,10 +11,6 @@ class LoginScreen extends StatelessWidget {
     final _NameController = TextEditingController();
     final _PasswordController = TextEditingController();
 
-    void login() {
-      context.push('/register');
-    }
-
     // void _login() async {
     //   final response = await http.post(
     //     Uri.parse(
@@ -69,7 +65,7 @@ class LoginScreen extends StatelessWidget {
             //   onPressed: login,
             //   child: const Text('Iniciar Sesión'),
             // ),
-            const ButtonCustom(name: 'registrer', router: '/registro')
+            const ButtonCustom(name: 'registrer', router: '/mapa')
             // ElevatedButton(
             //   onPressed: _goToRegistration,
             //   child: const Text('Registrarse'),

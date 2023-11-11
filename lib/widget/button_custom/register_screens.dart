@@ -12,7 +12,7 @@ class Register extends StatelessWidget {
     final _usernameController = TextEditingController();
     final _rollController = TextEditingController();
 
-    final backgroundImage = AssetImage('assets/aleja.jpg');
+    final backgroundImage = AssetImage('asset/aleja.jpg');
 
     return Scaffold(
       body: Stack(
