@@ -13,13 +13,13 @@ final GoRouter appRouter = GoRouter(initialLocation: '/', routes: <RouteBase>[
         return const LoginScreen();
       }),
   GoRoute(
-      path: '/registro',
-      builder: (BuildContext context, GoRouterState state) {
-        return const Register();
-      }),
-  GoRoute(
       path: '/mapa',
       builder: (BuildContext context, GoRouterState state) {
         return const MapSample();
+      }),
+  GoRoute(
+      path: '/registro',
+      builder: (BuildContext context, GoRouterState state) {
+        return const Register();
       }),
 ]);
